@@ -78,12 +78,9 @@ class _TabbBarState extends State<TabbBar> {
       body: Stack(
         children: [
           renderView(0, HomeScreen()),
-          renderView(
-            1,
-            DeviceScreen(),
-          ),
+          renderView(1, DeviceScreen(),),
           renderView(2, FarmingScreen()),
-          renderView(3, RoutinesFirstScreen()),
+          renderView(3, RoutinesFirstScreen(),),
         ],
       ),
     );

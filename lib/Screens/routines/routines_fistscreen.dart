@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:smarthome_ui/Screens/routines/routines_second_secreen.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
-import 'foutines_secondScreen.dart';
 
 class RoutinesFirstScreen extends StatefulWidget {
   const RoutinesFirstScreen({Key? key}) : super(key: key);
