@@ -4,14 +4,14 @@ import 'package:smarthome_ui/Screens/routines/routines_second_secreen.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 
-class RoutinesFirstScreen extends StatefulWidget {
-  const RoutinesFirstScreen({Key? key}) : super(key: key);
+class Routines extends StatefulWidget {
+  const Routines({Key? key}) : super(key: key);
 
   @override
-  _RoutinesFirstScreenState createState() => _RoutinesFirstScreenState();
+  _RoutinesState createState() => _RoutinesState();
 }
 
-class _RoutinesFirstScreenState extends State<RoutinesFirstScreen> {
+class _RoutinesState extends State<Routines> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -75,7 +75,7 @@ class _RoutinesFirstScreenState extends State<RoutinesFirstScreen> {
                               child: Icon(
                                 Icons.add,
                                 color: Colors.white,
-                                size: size.height * 0.06,
+                                size: size.height * 0.03,
                               ),
                             ),
                           ),
@@ -87,7 +87,7 @@ class _RoutinesFirstScreenState extends State<RoutinesFirstScreen> {
                     height: size.height * 0.01,
                   ),
                   Container(
-                    height: size.height * 0.04,
+                    height: size.height * 0.06,
                     width: size.width * 0.9,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

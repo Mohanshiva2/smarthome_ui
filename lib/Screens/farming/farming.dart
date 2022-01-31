@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 
-class FarmingScreen extends StatefulWidget {
-  const FarmingScreen({Key? key}) : super(key: key);
+class Farming extends StatefulWidget {
+  const Farming({Key? key}) : super(key: key);
 
   @override
-  _FarmingScreenState createState() => _FarmingScreenState();
+  _FarmingState createState() => _FarmingState();
 }
 
-class _FarmingScreenState extends State<FarmingScreen> {
+class _FarmingState extends State<Farming> {
   @override
   Widget build(BuildContext context) {
     return Container();

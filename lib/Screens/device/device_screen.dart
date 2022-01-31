@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 
-class DeviceScreen extends StatefulWidget {
-  const DeviceScreen({Key? key}) : super(key: key);
+class Device extends StatefulWidget {
+  const Device({Key? key}) : super(key: key);
 
   @override
-  _DeviceScreenState createState() => _DeviceScreenState();
+  _DeviceState createState() => _DeviceState();
 }
 
-class _DeviceScreenState extends State<DeviceScreen> {
+class _DeviceState extends State<Device> {
   @override
   Widget build(BuildContext context) {
     return Container();

@@ -38,7 +38,7 @@ dependencies:
   flutter_neumorphic:
   lottie:
   toggle_switch:
-  floating_bottom_navigation_bar:
+  custom_navigator:
 
 dev_dependencies:
   flutter_test:

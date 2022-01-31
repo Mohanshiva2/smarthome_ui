@@ -1,5 +1,4 @@
 import 'package:clay_containers/clay_containers.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smarthome_ui/Screens/device/device_screen.dart';
@@ -77,10 +76,10 @@ class _TabbBarState extends State<TabbBar> {
       ),
       body: Stack(
         children: [
-          renderView(0, HomeScreen()),
-          renderView(1, DeviceScreen(),),
-          renderView(2, FarmingScreen()),
-          renderView(3, RoutinesFirstScreen(),),
+          renderView(0, Home()),
+          renderView(1, Device(),),
+          renderView(2, Farming()),
+          renderView(3, Routines(),),
         ],
       ),
     );
