@@ -27,15 +27,15 @@ class _TabbBarState extends State<TabbBar> {
           borderRadius: BorderRadius.circular(40),
           boxShadow: [
             BoxShadow(
-              color: Color(0xffD1D9E6),
-              offset: Offset(4.0, 4.0),
-              blurRadius: 15.0,
-              spreadRadius: 1.0,
+              color: Colors.black12,
+              offset: Offset(8.0, 8.0),
+              blurRadius: 9.0,
+              spreadRadius: 1,
             ),
             BoxShadow(
-              color: Color(0xffFFFFFF),
-              offset: Offset(-0.0, -0.0),
-              blurRadius: 0.7,
+              color: Colors.white,
+              offset: Offset(-4.0, -4.0),
+              blurRadius: 7.0,
               spreadRadius: 1.0,
             ),
           ],
@@ -62,13 +62,14 @@ class _TabbBarState extends State<TabbBar> {
               items: [
                 BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.dashboard_rounded ), label: 'Devices'),
+                    icon: Icon(Icons.dashboard_rounded), label: 'Devices'),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.grass ),
+                  icon: Icon(Icons.grass),
                   label: 'Farming',
                 ),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.person), label: 'Routines'),
+                    icon: Icon(Icons.access_time_filled_rounded),
+                    label: 'Routines'),
               ],
             ),
           ),
@@ -76,10 +77,19 @@ class _TabbBarState extends State<TabbBar> {
       ),
       body: Stack(
         children: [
-          renderView(0, Home()),
-          renderView(1, Device(),),
+          renderView(
+            0,
+            Home(),
+          ),
+          renderView(
+            1,
+            Device(),
+          ),
           renderView(2, Farming()),
-          renderView(3, Routines(),),
+          renderView(
+            3,
+            Routines(),
+          ),
         ],
       ),
     );

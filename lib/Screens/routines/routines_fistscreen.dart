@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:smarthome_ui/Screens/routines/routines_second_secreen.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
-
 class Routines extends StatefulWidget {
   const Routines({Key? key}) : super(key: key);
 
@@ -55,7 +54,9 @@ class _RoutinesState extends State<Routines> {
                       setState(() {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const RoutinesSecondScreen()),
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const RoutinesSecondScreen()),
                         );
                       });
                     },
@@ -123,13 +124,14 @@ class _RoutinesState extends State<Routines> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.black12,
-                                  offset: Offset(4.0, 4.0),
-                                  blurRadius: 1.0,
-                                  spreadRadius: 0.4,
+                                  offset: Offset(8.0, 8.0),
+                                  blurRadius: 9.0,
+                                  spreadRadius: 1,
                                 ),
                                 BoxShadow(
                                   color: Colors.white,
-                                  offset: Offset(-4.0, -4.0),
+                                  offset:
+                                  Offset(-4.0, -4.0),
                                   blurRadius: 7.0,
                                   spreadRadius: 1.0,
                                 ),
@@ -173,13 +175,14 @@ class _RoutinesState extends State<Routines> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.black12,
-                                  offset: Offset(4.0, 4.0),
-                                  blurRadius: 1.0,
-                                  spreadRadius: 0.4,
+                                  offset: Offset(8.0, 8.0),
+                                  blurRadius: 9.0,
+                                  spreadRadius: 1,
                                 ),
                                 BoxShadow(
                                   color: Colors.white,
-                                  offset: Offset(-4.0, -4.0),
+                                  offset:
+                                  Offset(-4.0, -4.0),
                                   blurRadius: 7.0,
                                   spreadRadius: 1.0,
                                 ),
@@ -220,16 +223,17 @@ class _RoutinesState extends State<Routines> {
                             decoration: BoxDecoration(
                               color: Color(0xffECF0F3),
                               borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
+                              boxShadow:[
                                 BoxShadow(
                                   color: Colors.black12,
-                                  offset: Offset(4.0, 4.0),
-                                  blurRadius: 1.0,
-                                  spreadRadius: 0.4,
+                                  offset: Offset(8.0, 8.0),
+                                  blurRadius: 9.0,
+                                  spreadRadius: 1,
                                 ),
                                 BoxShadow(
                                   color: Colors.white,
-                                  offset: Offset(-4.0, -4.0),
+                                  offset:
+                                  Offset(-4.0, -4.0),
                                   blurRadius: 7.0,
                                   spreadRadius: 1.0,
                                 ),
@@ -273,13 +277,14 @@ class _RoutinesState extends State<Routines> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.black12,
-                                  offset: Offset(4.0, 4.0),
-                                  blurRadius: 1.0,
-                                  spreadRadius: 0.4,
+                                  offset: Offset(8.0, 8.0),
+                                  blurRadius: 9.0,
+                                  spreadRadius: 1,
                                 ),
                                 BoxShadow(
                                   color: Colors.white,
-                                  offset: Offset(-4.0, -4.0),
+                                  offset:
+                                  Offset(-4.0, -4.0),
                                   blurRadius: 7.0,
                                   spreadRadius: 1.0,
                                 ),
@@ -323,13 +328,14 @@ class _RoutinesState extends State<Routines> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.black12,
-                                  offset: Offset(4.0, 4.0),
-                                  blurRadius: 1.0,
-                                  spreadRadius: 0.4,
+                                  offset: Offset(8.0, 8.0),
+                                  blurRadius: 9.0,
+                                  spreadRadius: 1,
                                 ),
                                 BoxShadow(
                                   color: Colors.white,
-                                  offset: Offset(-4.0, -4.0),
+                                  offset:
+                                  Offset(-4.0, -4.0),
                                   blurRadius: 7.0,
                                   spreadRadius: 1.0,
                                 ),
@@ -373,13 +379,14 @@ class _RoutinesState extends State<Routines> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.black12,
-                                  offset: Offset(4.0, 4.0),
-                                  blurRadius: 1.0,
-                                  spreadRadius: 0.4,
+                                  offset: Offset(8.0, 8.0),
+                                  blurRadius: 9.0,
+                                  spreadRadius: 1,
                                 ),
                                 BoxShadow(
                                   color: Colors.white,
-                                  offset: Offset(-4.0, -4.0),
+                                  offset:
+                                  Offset(-4.0, -4.0),
                                   blurRadius: 7.0,
                                   spreadRadius: 1.0,
                                 ),
@@ -411,7 +418,7 @@ class _RoutinesState extends State<Routines> {
                             ),
                           ),
                           SizedBox(
-                            height: size.height * 0.04,
+                            height: size.height * 0.08,
                           ),
                         ],
                       ),

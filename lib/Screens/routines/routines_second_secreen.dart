@@ -9,14 +9,11 @@ class RoutinesSecondScreen extends StatefulWidget {
 }
 
 class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
-
   bool checkboxval = false;
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery
-        .of(context)
-        .size;
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Color(0xffECF0F3),
       body: SingleChildScrollView(
@@ -67,9 +64,9 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black12,
-                            offset: Offset(4.0, 4.0),
-                            blurRadius: 1.0,
-                            spreadRadius: 0.4,
+                            offset: Offset(8.0, 8.0),
+                            blurRadius: 9.0,
+                            spreadRadius: 1,
                           ),
                           BoxShadow(
                             color: Colors.white,
@@ -80,7 +77,7 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
                         ],
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(40),
+                        padding: const EdgeInsets.all(29),
                         child: Center(
                           child: TextField(
                             decoration: InputDecoration(
@@ -94,6 +91,7 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
                   SizedBox(
                     height: size.height * 0.03,
                   ),
+
                   // Switch Container......
                   Container(
                     width: double.infinity,
@@ -107,7 +105,8 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
                               fontSize: size.height * 0.03,
                               fontWeight: FontWeight.w700),
                         ),
-                        //check and dropdown
+
+                        //check and dropdown.....................................
                         Container(
                           padding: EdgeInsets.all(10),
                           child: Row(
@@ -117,74 +116,86 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
                                 child: Row(
                                   children: [
                                     Center(
-                                      child: Transform.scale(scale: 2,
-                                      child: Checkbox(
-                                        value: checkboxval,
-                                        onChanged: (bool? value) {
-                                          setState(() {
-                                            checkboxval = value!;
-                                          });
-                                        },
-
-                                      ),
+                                      child: Transform.scale(
+                                        scale: 1,
+                                        child: Checkbox(
+                                          value: checkboxval,
+                                          onChanged: (bool? value) {
+                                            setState(() {
+                                              checkboxval = value!;
+                                            });
+                                          },
+                                        ),
                                       ),
                                     ),
-                                    Text('Make it schedule',style: TextStyle(fontSize: 18),),
+                                    Text(
+                                      'Make it schedule',
+                                      style: TextStyle(fontSize: 15),
+                                    ),
                                   ],
                                 ),
                               ),
-
                               Container(
-                                  margin:EdgeInsets.only(right: size.width*0.03),
-                                  height: size.height*0.04,
-                                  width: size.width*0.4,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffECF0F3),
-                                    borderRadius: BorderRadius.circular(30),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black12,
-                                        offset: Offset(4.0, 4.0),
-                                        blurRadius: 1.0,
-                                        spreadRadius: 0.4,
-                                      ),
-                                      BoxShadow(
-                                        color: Colors.white,
-                                        offset: Offset(-4.0, -4.0),
-                                        blurRadius: 7.0,
-                                        spreadRadius: 1.0,
-                                      ),
-                                    ],
-                                  ),
-                                  child: Center(child: DropDownButton(),),),
+                                margin:
+                                    EdgeInsets.only(right: size.width * 0.03),
+                                height: size.height * 0.04,
+                                width: size.width * 0.4,
+                                decoration: BoxDecoration(
+                                  color: Color(0xffECF0F3),
+                                  borderRadius: BorderRadius.circular(30),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      offset: Offset(8.0, 8.0),
+                                      blurRadius: 9.0,
+                                      spreadRadius: 1,
+                                    ),
+                                    BoxShadow(
+                                      color: Colors.white,
+                                      offset: Offset(-4.0, -4.0),
+                                      blurRadius: 7.0,
+                                      spreadRadius: 1.0,
+                                    ),
+                                  ],
+                                ),
+                                child: Center(
+                                  child: DropDownButton(),
+                                ),
+                              ),
                             ],
                           ),
                         ),
-                        SizedBox(height: size.height*0.02,),
+                        SizedBox(
+                          height: size.height * 0.02,
+                        ),
                         Container(
-                          padding: EdgeInsets.all(20),
-                          width: size.width*1,
+                          width: size.width * 1,
                           height: size.height * 0.39,
                           child: SingleChildScrollView(
                             child: Column(
                               children: [
-                                SizedBox(height: size.height*0.03,),
+                                SizedBox(
+                                  height: size.height * 0.03,
+                                ),
                                 Container(
-                                  margin: EdgeInsets.only(left: 20,right: 20),
+                                  padding: EdgeInsets.all(10),
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
                                     children: [
                                       GestureDetector(
-                                        onTap: (){},
+                                        onTap: () {},
                                         child: Container(
                                           child: Column(
                                             children: [
                                               Container(
-                                                height:80,
-                                                width: 80,
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
                                                 decoration: BoxDecoration(
                                                   color: Color(0xffECF0F3),
-                                                  borderRadius: BorderRadius.circular(300),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
                                                   boxShadow: [
                                                     BoxShadow(
                                                       color: Colors.black12,
@@ -194,52 +205,668 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
                                                     ),
                                                     BoxShadow(
                                                       color: Colors.white,
-                                                      offset: Offset(-4.0, -4.0),
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
                                                       blurRadius: 7.0,
                                                       spreadRadius: 1.0,
                                                     ),
                                                   ],
                                                 ),
                                                 child: Center(
-                                                  child: Icon(Icons.lightbulb_rounded  ,size: 50,color: Color(0xff374957,),),
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
                                                 ),
                                               ),
-                                              SizedBox(height: size.height*0.01,),
-                                              Text("Bulb",style: TextStyle(fontSize: size.height*0.013),)
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "Bulb",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
                                             ],
                                           ),
                                         ),
                                       ),
-
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "Tube light",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "Fan",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "Fan 2",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
-
+                                Container(
+                                  padding: EdgeInsets.all(10),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "Motor",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "Floor light",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "Curtain",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "TV",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  padding: EdgeInsets.all(10),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "AC",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "Home theater",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "ceiling light",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.07,
+                                                width: size.width * .16,
+                                                decoration: BoxDecoration(
+                                                  color: Color(0xffECF0F3),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          300),
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.black12,
+                                                      offset: Offset(8.0, 8.0),
+                                                      blurRadius: 9.0,
+                                                      spreadRadius: 1,
+                                                    ),
+                                                    BoxShadow(
+                                                      color: Colors.white,
+                                                      offset:
+                                                          Offset(-4.0, -4.0),
+                                                      blurRadius: 7.0,
+                                                      spreadRadius: 1.0,
+                                                    ),
+                                                  ],
+                                                ),
+                                                child: Center(
+                                                  child: Icon(
+                                                    Icons.lightbulb_rounded,
+                                                    size: 30,
+                                                    color: Color(
+                                                      0xff374957,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text(
+                                                "Bulb 2",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        size.height * 0.013),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                           ),
-
                         ),
-
-
                       ],
                     ),
                   ),
-                  SizedBox(height: size.height*0.01,),
+                  SizedBox(
+                    height: size.height * 0.01,
+                  ),
 
                   Center(
                     child: GestureDetector(
-                      onTap: (){},
+                      onTap: () {},
                       child: Container(
-                        height: size.height*0.05,
-                        width: size.width*0.4,
+                        height: size.height * 0.05,
+                        width: size.width * 0.4,
                         decoration: BoxDecoration(
                           color: Color(0xff374957),
                           borderRadius: BorderRadius.circular(50),
                         ),
                         child: Center(
                           child: Text(
-                            "Done",style: TextStyle(fontSize: size.height*0.020,color: Color(0xffFFFFFF)),
+                            "Done",
+                            style: TextStyle(
+                                fontSize: size.height * 0.020,
+                                color: Color(0xffFFFFFF)),
                           ),
                         ),
                       ),
@@ -248,7 +875,6 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
                 ],
               ),
             ),
-
           ],
         ),
       ),
@@ -266,15 +892,13 @@ class DropDownButton extends StatefulWidget {
 }
 
 class _DropDownButtonState extends State<DropDownButton> {
+  String? _value;
 
-
-   String? _value;
   @override
   Widget build(BuildContext context) {
     return DropdownButtonHideUnderline(
       child: Center(
-        child:
-        DropdownButton<String>(
+        child: DropdownButton<String>(
           items: [
             DropdownMenuItem<String>(
               child: Text('Item 1'),
@@ -289,7 +913,7 @@ class _DropDownButtonState extends State<DropDownButton> {
               value: 'three',
             ),
           ],
-          onChanged: ( value) {
+          onChanged: (value) {
             setState(() {
               _value = value!;
             });
@@ -297,18 +921,7 @@ class _DropDownButtonState extends State<DropDownButton> {
           hint: Text('Select Item'),
           value: _value,
         ),
-
-        ),
-
-
-
-
-      );
-
-
-
+      ),
+    );
   }
-
-
 }
-
