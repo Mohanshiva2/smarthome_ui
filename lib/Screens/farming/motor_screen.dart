@@ -1,0 +1,441 @@
+import 'package:clay_containers/clay_containers.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:slide_to_confirm/slide_to_confirm.dart';
+import 'package:toggle_switch/toggle_switch.dart';
+
+class MotorScreen extends StatefulWidget {
+  const MotorScreen({Key? key}) : super(key: key);
+
+  @override
+  _MotorScreenState createState() => _MotorScreenState();
+}
+
+class _MotorScreenState extends State<MotorScreen> {
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Scaffold(
+      backgroundColor: Color(0xffECF0F3),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(
+              top: size.height * 0.04,
+              left: size.width * 0.05,
+              right: size.width * 0.05),
+          child: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Farming',
+                        style: TextStyle(
+                            fontSize: size.height * 0.04,
+                            fontWeight: FontWeight.w900),
+                      ),
+                      Container(
+                        child: Row(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                height: size.height * 0.05,
+                                width: size.width * 0.05,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(300),
+                                ),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.grid_view,
+                                    color: Color(0xff374957),
+                                    size: size.height * 0.05,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: size.width * 0.05,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                height: size.height * 0.05,
+                                width: size.width * 0.05,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(300),
+                                ),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.settings,
+                                    color: Color(0xff374957),
+                                    size: size.height * 0.05,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: size.height * 0.05,
+                ),
+                Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Motors",
+                        style: TextStyle(fontSize: size.height * 0.025),
+                      ),
+                      SizedBox(
+                        height: size.height * 0.02,
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        height: size.height * 0.6,
+                        width: size.width * 0.9,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Center(
+                              child: Container(
+                                padding: EdgeInsets.all(30),
+                                // height: size.height * 0.15,
+                                width: size.width * 0.8,
+                                decoration: BoxDecoration(
+                                  color: Color(0xffECF0F3),
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      offset: Offset(8.0, 8.0),
+                                      blurRadius: 9.0,
+                                      spreadRadius: 1,
+                                    ),
+                                    BoxShadow(
+                                      color: Colors.white,
+                                      offset: Offset(-4.0, -4.0),
+                                      blurRadius: 7.0,
+                                      spreadRadius: 1.0,
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.04,
+                                                width: size.width * 0.06,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  gradient: LinearGradient(
+                                                    colors: [Colors.white.withOpacity(0.0),Colors.black12.withOpacity(0.2),],
+                                                    begin:  FractionalOffset(1.0, 1.0),
+                                                    end:  FractionalOffset(-1.9, 0.2),
+                                                    tileMode: TileMode.clamp,
+                                                    stops: [
+                                                      0.1,
+                                                      0.4,
+                                                    ],
+                                                  ),
+                                                ),
+                                                child: Center(
+                                                  child: Text(
+                                                    "R",style: TextStyle(color: Colors.red.shade700),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text('<Data>')
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.04,
+                                                width: size.width * 0.06,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  gradient: LinearGradient(
+                                                    colors: [Colors.white.withOpacity(0.0),Colors.black12.withOpacity(0.2),],
+                                                    begin:  FractionalOffset(1.0, 1.0),
+                                                    end:  FractionalOffset(-1.9, 0.2),
+                                                      tileMode: TileMode.clamp,
+                                                    stops: [
+                                                      0.1,
+                                                      0.4,
+                                                    ],
+                                                  ),
+                                                ),
+                                                child: Center(
+                                                  child: Text(
+                                                    "Y",style: TextStyle(color: Colors.yellow.shade700),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text('<Data>')
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.04,
+                                                width: size.width * 0.06,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  gradient: LinearGradient(
+                                                    colors: [Colors.white.withOpacity(0.0),Colors.black12.withOpacity(0.2),],
+                                                    begin:  FractionalOffset(1.0, 1.0),
+                                                    end:  FractionalOffset(-1.9, 0.2),
+                                                    tileMode: TileMode.clamp,
+                                                    stops: [
+                                                      0.1,
+                                                      0.4,
+                                                    ],
+                                                  ),
+                                                ),
+                                                child: Center(
+                                                  child: Text(
+                                                    "G",style: TextStyle(color: Colors.green.shade700),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text('<Data>')
+                                            ],
+                                          ),
+                                        ),
+
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.02,
+                                    ),
+                                    Container(
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Units",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Text(
+                                            "<Data>",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: size.height * 0.03,
+                            ),
+                            Center(
+                              child: Container(
+                                padding: EdgeInsets.all(30),
+                                // height: size.height * 0.19,
+                                width: size.width * 0.8,
+                                decoration: BoxDecoration(
+                                  color: Color(0xffECF0F3),
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      offset: Offset(8.0, 8.0),
+                                      blurRadius: 9.0,
+                                      spreadRadius: 1,
+                                    ),
+                                    BoxShadow(
+                                      color: Colors.white,
+                                      offset: Offset(-4.0, -4.0),
+                                      blurRadius: 7.0,
+                                      spreadRadius: 1.0,
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "Running time",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                              fontSize: size.height * 0.013),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.02,
+                                    ),
+                                    Container(
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Today",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                          Container(
+                                              height: size.height * 0.03,
+                                              width: size.width * 0.1,
+                                              decoration: BoxDecoration(
+                                                color: Color(0xffECF0F3),
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.black12,
+                                                    offset: Offset(8.0, 8.0),
+                                                    blurRadius: 9.0,
+                                                    spreadRadius: 1,
+                                                  ),
+                                                  BoxShadow(
+                                                    color: Colors.white,
+                                                    offset: Offset(-4.0, -4.0),
+                                                    blurRadius: 7.0,
+                                                    spreadRadius: 1.0,
+                                                  ),
+                                                ],
+                                              ),
+                                              child: Center(
+                                                  child: Text(
+                                                "1.25hrs",
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ))),
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.04,
+                                    ),
+                                    Container(
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "This Month",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                          Container(
+                                              height: size.height * 0.03,
+                                              width: size.width * 0.1,
+                                              decoration: BoxDecoration(
+                                                color: Color(0xffECF0F3),
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.black12,
+                                                    offset: Offset(8.0, 8.0),
+                                                    blurRadius: 9.0,
+                                                    spreadRadius: 1,
+                                                  ),
+                                                  BoxShadow(
+                                                    color: Colors.white,
+                                                    offset: Offset(-4.0, -4.0),
+                                                    blurRadius: 7.0,
+                                                    spreadRadius: 1.0,
+                                                  ),
+                                                ],
+                                              ),
+                                              child: Center(
+                                                  child: Text(
+                                                "1.25hrs",
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ))),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Center(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xffECF0F3),
+                            borderRadius: BorderRadius.circular(50),
+                            border: Border.all(color: Colors.transparent),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.white,
+                                offset: Offset(3.0, 3.0),
+                                blurRadius: 8.0,
+                                spreadRadius: 1,
+                              ),
+                              BoxShadow(
+                                color: Colors.black12,
+                                offset: Offset(0.0, -5.0),
+                                blurRadius: 7.0,
+                                spreadRadius: 1.0,
+                              ),
+                            ],
+                          ),
+                          child: ConfirmationSlider(
+                              height: size.height * 0.05,
+                              text: "Slid to off all",
+                              backgroundColorEnd: Colors.white,
+                              backgroundColor: Colors.white,
+                              shadow: BoxShadow(spreadRadius: -1),
+                              foregroundColor: Color(0xff374957),
+                              onConfirmation: () {}),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

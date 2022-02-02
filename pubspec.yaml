@@ -39,6 +39,7 @@ dependencies:
   lottie:
   toggle_switch:
   custom_navigator:
+  slide_to_confirm:
 
 dev_dependencies:
   flutter_test:

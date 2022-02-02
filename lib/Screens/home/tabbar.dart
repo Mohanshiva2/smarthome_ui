@@ -69,7 +69,7 @@ class _TabbBarState extends State<TabbBar> {
                 ),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.access_time_filled_rounded),
-                    label: 'Routines'),
+                    label: 'Routines',),
               ],
             ),
           ),
