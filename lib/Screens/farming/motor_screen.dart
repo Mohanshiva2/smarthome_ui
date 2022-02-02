@@ -2,7 +2,6 @@ import 'package:clay_containers/clay_containers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:slide_to_confirm/slide_to_confirm.dart';
-import 'package:toggle_switch/toggle_switch.dart';
 
 class MotorScreen extends StatefulWidget {
   const MotorScreen({Key? key}) : super(key: key);
@@ -92,7 +91,9 @@ class _MotorScreenState extends State<MotorScreen> {
                     children: [
                       Text(
                         "Motors",
-                        style: TextStyle(fontSize: size.height * 0.025),
+                        style: TextStyle(
+                            fontSize: size.height * 0.025,
+                            fontWeight: FontWeight.w900),
                       ),
                       SizedBox(
                         height: size.height * 0.02,
@@ -141,11 +142,19 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 width: size.width * 0.06,
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
-                                                  borderRadius: BorderRadius.circular(10),
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
                                                   gradient: LinearGradient(
-                                                    colors: [Colors.white.withOpacity(0.0),Colors.black12.withOpacity(0.2),],
-                                                    begin:  FractionalOffset(1.0, 1.0),
-                                                    end:  FractionalOffset(-1.9, 0.2),
+                                                    colors: [
+                                                      Colors.white
+                                                          .withOpacity(0.0),
+                                                      Colors.black12
+                                                          .withOpacity(0.2),
+                                                    ],
+                                                    begin: FractionalOffset(
+                                                        1.0, 1.0),
+                                                    end: FractionalOffset(
+                                                        -1.9, 0.2),
                                                     tileMode: TileMode.clamp,
                                                     stops: [
                                                       0.1,
@@ -155,7 +164,10 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 ),
                                                 child: Center(
                                                   child: Text(
-                                                    "R",style: TextStyle(color: Colors.red.shade700),
+                                                    "R",
+                                                    style: TextStyle(
+                                                        color: Colors
+                                                            .red.shade700),
                                                   ),
                                                 ),
                                               ),
@@ -174,12 +186,20 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 width: size.width * 0.06,
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
-                                                  borderRadius: BorderRadius.circular(10),
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
                                                   gradient: LinearGradient(
-                                                    colors: [Colors.white.withOpacity(0.0),Colors.black12.withOpacity(0.2),],
-                                                    begin:  FractionalOffset(1.0, 1.0),
-                                                    end:  FractionalOffset(-1.9, 0.2),
-                                                      tileMode: TileMode.clamp,
+                                                    colors: [
+                                                      Colors.white
+                                                          .withOpacity(0.0),
+                                                      Colors.black12
+                                                          .withOpacity(0.2),
+                                                    ],
+                                                    begin: FractionalOffset(
+                                                        1.0, 1.0),
+                                                    end: FractionalOffset(
+                                                        -1.9, 0.2),
+                                                    tileMode: TileMode.clamp,
                                                     stops: [
                                                       0.1,
                                                       0.4,
@@ -188,7 +208,10 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 ),
                                                 child: Center(
                                                   child: Text(
-                                                    "Y",style: TextStyle(color: Colors.yellow.shade700),
+                                                    "Y",
+                                                    style: TextStyle(
+                                                        color: Colors
+                                                            .yellow.shade700),
                                                   ),
                                                 ),
                                               ),
@@ -207,11 +230,19 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 width: size.width * 0.06,
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
-                                                  borderRadius: BorderRadius.circular(10),
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
                                                   gradient: LinearGradient(
-                                                    colors: [Colors.white.withOpacity(0.0),Colors.black12.withOpacity(0.2),],
-                                                    begin:  FractionalOffset(1.0, 1.0),
-                                                    end:  FractionalOffset(-1.9, 0.2),
+                                                    colors: [
+                                                      Colors.white
+                                                          .withOpacity(0.0),
+                                                      Colors.black12
+                                                          .withOpacity(0.2),
+                                                    ],
+                                                    begin: FractionalOffset(
+                                                        1.0, 1.0),
+                                                    end: FractionalOffset(
+                                                        -1.9, 0.2),
                                                     tileMode: TileMode.clamp,
                                                     stops: [
                                                       0.1,
@@ -221,7 +252,10 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 ),
                                                 child: Center(
                                                   child: Text(
-                                                    "G",style: TextStyle(color: Colors.green.shade700),
+                                                    "G",
+                                                    style: TextStyle(
+                                                        color: Colors
+                                                            .green.shade700),
                                                   ),
                                                 ),
                                               ),
@@ -232,7 +266,6 @@ class _MotorScreenState extends State<MotorScreen> {
                                             ],
                                           ),
                                         ),
-
                                       ],
                                     ),
                                     SizedBox(
@@ -295,7 +328,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                         Text(
                                           "Running time",
                                           style: TextStyle(
-                                            fontWeight: FontWeight.bold,
+                                              fontWeight: FontWeight.bold,
                                               fontSize: size.height * 0.013),
                                         )
                                       ],
@@ -424,6 +457,10 @@ class _MotorScreenState extends State<MotorScreen> {
                               backgroundColorEnd: Colors.white,
                               backgroundColor: Colors.white,
                               shadow: BoxShadow(spreadRadius: -1),
+                              sliderButtonContent: Icon(
+                                Icons.power_settings_new_rounded,
+                                color: Colors.white54,
+                              ),
                               foregroundColor: Color(0xff374957),
                               onConfirmation: () {}),
                         ),

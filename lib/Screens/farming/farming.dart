@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:slide_to_confirm/slide_to_confirm.dart';
+import 'package:smarthome_ui/Screens/farming/gate_valve/gate_valve_main.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 import 'motor_screen.dart';
@@ -93,8 +94,8 @@ class _FarmingState extends State<Farming> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Motors",
-                        style: TextStyle(fontSize: size.height * 0.025),
+                        "Devices",
+                        style: TextStyle(fontSize: size.height * 0.025,fontWeight: FontWeight.w900),
                       ),
                       SizedBox(
                         height: size.height * 0.08,
@@ -123,7 +124,7 @@ class _FarmingState extends State<Farming> {
                                   },
                                   child: Container(
                                     padding: EdgeInsets.all(15),
-                                    height: size.height * 0.08,
+                                    height: size.height * 0.07,
                                     width: size.width * 0.8,
                                     decoration: BoxDecoration(
                                       color: Color(0xffECF0F3),
@@ -174,10 +175,19 @@ class _FarmingState extends State<Farming> {
                                   height: size.height * 0.05,
                                 ),
                                 GestureDetector(
-                                  onTap: (){},
+                                  onTap: (){
+                                    setState(() {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                             GateValve(),),
+                                      );
+                                    });
+                                  },
                                   child: Container(
                                     padding: EdgeInsets.all(15),
-                                    height: size.height * 0.08,
+                                    height: size.height * 0.07,
                                     width: size.width * 0.8,
                                     decoration: BoxDecoration(
                                       color: Color(0xffECF0F3),
@@ -202,7 +212,7 @@ class _FarmingState extends State<Farming> {
                                           MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          "Motor 2",
+                                          "Gate Valves",
                                           style: TextStyle(
                                               fontSize: size.height * 0.02,
                                               fontWeight: FontWeight.w600),
@@ -266,6 +276,7 @@ class _FarmingState extends State<Farming> {
                                           spreadRadius: -1
                                         ),
                                         foregroundColor: Color(0xff374957),
+                                        sliderButtonContent: Icon(Icons.power_settings_new_rounded ,color: Colors.white54,),
                                         onConfirmation: (){}),
                                   ),
                                 ),
