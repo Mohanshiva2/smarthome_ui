@@ -6,6 +6,13 @@ import 'package:smarthome_ui/Screens/farming/gate_valve/gate_valve_2.dart';
 import 'package:smarthome_ui/Screens/farming/gate_valve/gate_valve_3.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
+class NewContainer {
+  final String text;
+  var bool = false;
+
+  NewContainer(this.bool, this.text);
+}
+
 class GateValve extends StatefulWidget {
   const GateValve({Key? key}) : super(key: key);
 
@@ -14,16 +21,48 @@ class GateValve extends StatefulWidget {
 }
 
 class _GateValveState extends State<GateValve> {
+  final bool values = false;
+
+  List<ItemLists> items = [
+    ItemLists(
+      title: 'Gate Valve 1',
+      favorite: false,
+    ),
+    ItemLists(
+      title: 'Gate Valve 2',
+      favorite: false,
+    ),
+    ItemLists(
+      title: 'Gate Valve 3',
+      favorite: false,
+    ),
+    ItemLists(
+      title: 'Gate Valve 4',
+      favorite: false,
+    ),
+    ItemLists(
+      title: 'Gate Valve 4',
+      favorite: false,
+    ),
+    ItemLists(
+      title: 'Gate Valve 5',
+      favorite: false,
+    ),
+    ItemLists(
+      title: 'Gate Valve 5',
+      favorite: false,
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return
-      Scaffold(
+    return Scaffold(
       backgroundColor: Color(0xffECF0F3),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(
-              top: size.height * 0.04,
+              top: size.height * 0.03,
               left: size.width * 0.05,
               right: size.width * 0.05),
           child: Container(
@@ -37,7 +76,7 @@ class _GateValveState extends State<GateValve> {
                       Text(
                         'Farming',
                         style: TextStyle(
-                            fontSize: size.height * 0.04,
+                            fontSize: size.height * 0.05,
                             fontWeight: FontWeight.w900),
                       ),
                       Container(
@@ -55,7 +94,7 @@ class _GateValveState extends State<GateValve> {
                                   child: Icon(
                                     Icons.grid_view,
                                     color: Color(0xff374957),
-                                    size: size.height * 0.05,
+                                    size: size.height * 0.03,
                                   ),
                                 ),
                               ),
@@ -75,7 +114,7 @@ class _GateValveState extends State<GateValve> {
                                   child: Icon(
                                     Icons.settings,
                                     color: Color(0xff374957),
-                                    size: size.height * 0.05,
+                                    size: size.height * 0.03,
                                   ),
                                 ),
                               ),
@@ -95,34 +134,27 @@ class _GateValveState extends State<GateValve> {
                     children: [
                       Text(
                         "Gate Valves",
-                        style: TextStyle(fontSize: size.height * 0.025,fontWeight: FontWeight.w900),
+                        style: TextStyle(
+                            fontSize: size.height * 0.04,
+                            fontWeight: FontWeight.w900),
                       ),
                       SizedBox(
                         height: size.height * 0.02,
                       ),
-                      Container(
-                        height: size.height*0.6,
-                        width: size.width*1,
-                        child: SingleChildScrollView(
-                          child: Column(
-                            children: [
-                              SizedBox(height: size.height*0.04,),
-                              GestureDetector(
-                                onTap: () {
-                                  setState(() {
-                                    setState(() {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                            const GateValve1()),
-                                      );
-                                    });
-                                  });
-                                },
+                      SingleChildScrollView(
+                        child: Container(
+                          height: size.height * 0.6,
+                          width: size.width * 1,
+                          child: ListView.builder(
+                            scrollDirection: Axis.vertical,
+                            shrinkWrap: true,
+                            itemCount: items.length,
+                            itemBuilder: (context, index) {
+                              return GestureDetector(
+                                onTap: () {},
                                 child: Container(
-                                  padding: EdgeInsets.all(15),
-                                  height: size.height * 0.07,
+                                  margin: EdgeInsets.all(20),
+                                  height: size.height * 0.06,
                                   width: size.width * 0.8,
                                   decoration: BoxDecoration(
                                     color: Color(0xffECF0F3),
@@ -142,17 +174,10 @@ class _GateValveState extends State<GateValve> {
                                       ),
                                     ],
                                   ),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "Gate Valve 1",
-                                        style: TextStyle(
-                                            fontSize: size.height * 0.015,
-                                            fontWeight: FontWeight.w600),
-                                      ),
-                                      ToggleSwitch(
+                                  child: Center(
+                                    child: ListTile(
+                                      title: Text('${items[index].title}'),
+                                      trailing: ToggleSwitch(
                                         totalSwitches: 2,
                                         minHeight: size.height * 0.2,
                                         minWidth: 30,
@@ -163,212 +188,282 @@ class _GateValveState extends State<GateValve> {
                                         inactiveBgColor: Colors.white,
                                         borderColor: [Colors.black12],
                                         borderWidth: 1,
-                                        onToggle: null,
+                                        changeOnTap: values != values,
+                                        onToggle: (bool) {
+                                          setState(() {
+                                          values != values;
+                                          });
+                                        },
                                       ),
-                                    ],
+                                    ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: size.height * 0.05,
-                              ),
-                              GestureDetector(
-                                onTap: (){
-
-                                    setState(() {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                            const GateValve2()),
-                                      );
-
-                                  });
-                                },
-                                child: Container(
-                                  padding: EdgeInsets.all(15),
-                                  height: size.height * 0.07,
-                                  width: size.width * 0.8,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffECF0F3),
-                                    borderRadius: BorderRadius.circular(20),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black12,
-                                        offset: Offset(8.0, 8.0),
-                                        blurRadius: 9.0,
-                                        spreadRadius: 1,
-                                      ),
-                                      BoxShadow(
-                                        color: Colors.white,
-                                        offset: Offset(-4.0, -4.0),
-                                        blurRadius: 7.0,
-                                        spreadRadius: 1.0,
-                                      ),
-                                    ],
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "Gate Valve 2",
-                                        style: TextStyle(
-                                            fontSize: size.height * 0.015,
-                                            fontWeight: FontWeight.w600),
-                                      ),
-                                      ToggleSwitch(
-                                        totalSwitches: 2,
-                                        minHeight: size.height * 0.2,
-                                        minWidth: 30,
-                                        cornerRadius: 9,
-                                        activeBgColor: [Color(0xff374957)],
-                                        activeFgColor: Colors.white,
-                                        inactiveFgColor: Colors.white,
-                                        inactiveBgColor: Colors.white,
-                                        borderColor: [Colors.black12],
-                                        borderWidth: 1,
-                                        onToggle: null,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: size.height * 0.05,
-                              ),
-                              GestureDetector(
-                                onTap: (){
-                                  setState(() {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                          const GateValve3()),
-                                    );
-                                  });
-                                },
-                                child: Container(
-                                  padding: EdgeInsets.all(15),
-                                  height: size.height * 0.07,
-                                  width: size.width * 0.8,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffECF0F3),
-                                    borderRadius: BorderRadius.circular(20),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black12,
-                                        offset: Offset(8.0, 8.0),
-                                        blurRadius: 9.0,
-                                        spreadRadius: 1,
-                                      ),
-                                      BoxShadow(
-                                        color: Colors.white,
-                                        offset: Offset(-4.0, -4.0),
-                                        blurRadius: 7.0,
-                                        spreadRadius: 1.0,
-                                      ),
-                                    ],
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "Gate Valve 3",
-                                        style: TextStyle(
-                                            fontSize: size.height * 0.015,
-                                            fontWeight: FontWeight.w600),
-                                      ),
-                                      ToggleSwitch(
-                                        totalSwitches: 2,
-                                        minHeight: size.height * 0.2,
-                                        minWidth: 30,
-                                        cornerRadius: 9,
-                                        activeBgColor: [Color(0xff374957)],
-                                        activeFgColor: Colors.white,
-                                        inactiveFgColor: Colors.white,
-                                        inactiveBgColor: Colors.white,
-                                        borderColor: [Colors.black12],
-                                        borderWidth: 1,
-                                        onToggle: null,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: size.height * 0.05,
-                              ),
-                              GestureDetector(
-                                onTap: (){
-                                  setState(() {
-
-                                  });
-                                },
-                                child: Container(
-                                  padding: EdgeInsets.all(15),
-                                  height: size.height * 0.07,
-                                  width: size.width * 0.8,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffECF0F3),
-                                    borderRadius: BorderRadius.circular(20),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black12,
-                                        offset: Offset(8.0, 8.0),
-                                        blurRadius: 9.0,
-                                        spreadRadius: 1,
-                                      ),
-                                      BoxShadow(
-                                        color: Colors.white,
-                                        offset: Offset(-4.0, -4.0),
-                                        blurRadius: 7.0,
-                                        spreadRadius: 1.0,
-                                      ),
-                                    ],
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "Gate Valve 4",
-                                        style: TextStyle(
-                                            fontSize: size.height * 0.015,
-                                            fontWeight: FontWeight.w600),
-                                      ),
-                                      ToggleSwitch(
-                                        totalSwitches: 2,
-                                        minHeight: size.height * 0.2,
-                                        minWidth: 30,
-                                        cornerRadius: 9,
-                                        activeBgColor: [Color(0xff374957)],
-                                        activeFgColor: Colors.white,
-                                        inactiveFgColor: Colors.white,
-                                        inactiveBgColor: Colors.white,
-                                        borderColor: [Colors.black12],
-                                        borderWidth: 1,
-                                        onToggle: null,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: size.height * 0.05,
-                              ),
-
-
-                            ],
+                              );
+                            },
                           ),
+                          // SingleChildScrollView(
+                          //   child: Column(
+                          //     children: [
+                          //       SizedBox(height: size.height*0.04,),
+                          //       GestureDetector(
+                          //         onTap: () {
+                          //           setState(() {
+                          //             setState(() {
+                          //               Navigator.push(
+                          //                 context,
+                          //                 MaterialPageRoute(
+                          //                     builder: (context) =>
+                          //                     const GateValve1()),
+                          //               );
+                          //             });
+                          //           });
+                          //         },
+                          //         child: Container(
+                          //           padding: EdgeInsets.all(15),
+                          //           height: size.height * 0.07,
+                          //           width: size.width * 0.8,
+                          //           decoration: BoxDecoration(
+                          //             color: Color(0xffECF0F3),
+                          //             borderRadius: BorderRadius.circular(20),
+                          //             boxShadow: [
+                          //               BoxShadow(
+                          //                 color: Colors.black12,
+                          //                 offset: Offset(8.0, 8.0),
+                          //                 blurRadius: 9.0,
+                          //                 spreadRadius: 1,
+                          //               ),
+                          //               BoxShadow(
+                          //                 color: Colors.white,
+                          //                 offset: Offset(-4.0, -4.0),
+                          //                 blurRadius: 7.0,
+                          //                 spreadRadius: 1.0,
+                          //               ),
+                          //             ],
+                          //           ),
+                          //           child: Row(
+                          //             mainAxisAlignment:
+                          //             MainAxisAlignment.spaceBetween,
+                          //             children: [
+                          //               Text(
+                          //                 "Gate Valve 1",
+                          //                 style: TextStyle(
+                          //                     fontSize: size.height * 0.023,
+                          //                     fontWeight: FontWeight.w600),
+                          //               ),
+                          //               ToggleSwitch(
+                          //                 totalSwitches: 2,
+                          //                 minHeight: size.height * 0.2,
+                          //                 minWidth: 30,
+                          //                 cornerRadius: 9,
+                          //                 activeBgColor: [Color(0xff374957)],
+                          //                 activeFgColor: Colors.white,
+                          //                 inactiveFgColor: Colors.white,
+                          //                 inactiveBgColor: Colors.white,
+                          //                 borderColor: [Colors.black12],
+                          //                 borderWidth: 1,
+                          //                 onToggle: null,
+                          //               ),
+                          //             ],
+                          //           ),
+                          //         ),
+                          //       ),
+                          //       SizedBox(
+                          //         height: size.height * 0.05,
+                          //       ),
+                          //       GestureDetector(
+                          //         onTap: (){
+                          //             setState(() {
+                          //               Navigator.push(
+                          //                 context,
+                          //                 MaterialPageRoute(
+                          //                     builder: (context) =>
+                          //                     const GateValve2()),
+                          //               );
+                          //           });
+                          //         },
+                          //         child: Container(
+                          //           padding: EdgeInsets.all(15),
+                          //           height: size.height * 0.07,
+                          //           width: size.width * 0.8,
+                          //           decoration: BoxDecoration(
+                          //             color: Color(0xffECF0F3),
+                          //             borderRadius: BorderRadius.circular(20),
+                          //             boxShadow: [
+                          //               BoxShadow(
+                          //                 color: Colors.black12,
+                          //                 offset: Offset(8.0, 8.0),
+                          //                 blurRadius: 9.0,
+                          //                 spreadRadius: 1,
+                          //               ),
+                          //               BoxShadow(
+                          //                 color: Colors.white,
+                          //                 offset: Offset(-4.0, -4.0),
+                          //                 blurRadius: 7.0,
+                          //                 spreadRadius: 1.0,
+                          //               ),
+                          //             ],
+                          //           ),
+                          //           child: Row(
+                          //             mainAxisAlignment:
+                          //             MainAxisAlignment.spaceBetween,
+                          //             children: [
+                          //               Text(
+                          //                 "Gate Valve 2",
+                          //                 style: TextStyle(
+                          //                     fontSize: size.height * 0.023,
+                          //                     fontWeight: FontWeight.w600),
+                          //               ),
+                          //               ToggleSwitch(
+                          //                 totalSwitches: 2,
+                          //                 minHeight: size.height * 0.2,
+                          //                 minWidth: 30,
+                          //                 cornerRadius: 9,
+                          //                 activeBgColor: [Color(0xff374957)],
+                          //                 activeFgColor: Colors.white,
+                          //                 inactiveFgColor: Colors.white,
+                          //                 inactiveBgColor: Colors.white,
+                          //                 borderColor: [Colors.black12],
+                          //                 borderWidth: 1,
+                          //                 onToggle: null,
+                          //               ),
+                          //             ],
+                          //           ),
+                          //         ),
+                          //       ),
+                          //       SizedBox(
+                          //         height: size.height * 0.05,
+                          //       ),
+                          //       GestureDetector(
+                          //         onTap: (){
+                          //           setState(() {
+                          //             Navigator.push(
+                          //               context,
+                          //               MaterialPageRoute(
+                          //                   builder: (context) =>
+                          //                   const GateValve3()),
+                          //             );
+                          //           });
+                          //         },
+                          //         child: Container(
+                          //           padding: EdgeInsets.all(15),
+                          //           height: size.height * 0.07,
+                          //           width: size.width * 0.8,
+                          //           decoration: BoxDecoration(
+                          //             color: Color(0xffECF0F3),
+                          //             borderRadius: BorderRadius.circular(20),
+                          //             boxShadow: [
+                          //               BoxShadow(
+                          //                 color: Colors.black12,
+                          //                 offset: Offset(8.0, 8.0),
+                          //                 blurRadius: 9.0,
+                          //                 spreadRadius: 1,
+                          //               ),
+                          //               BoxShadow(
+                          //                 color: Colors.white,
+                          //                 offset: Offset(-4.0, -4.0),
+                          //                 blurRadius: 7.0,
+                          //                 spreadRadius: 1.0,
+                          //               ),
+                          //             ],
+                          //           ),
+                          //           child: Row(
+                          //             mainAxisAlignment:
+                          //             MainAxisAlignment.spaceBetween,
+                          //             children: [
+                          //               Text(
+                          //                 "Gate Valve 3",
+                          //                 style: TextStyle(
+                          //                     fontSize: size.height * 0.023,
+                          //                     fontWeight: FontWeight.w600),
+                          //               ),
+                          //               ToggleSwitch(
+                          //                 totalSwitches: 2,
+                          //                 minHeight: size.height * 0.2,
+                          //                 minWidth: 30,
+                          //                 cornerRadius: 9,
+                          //                 activeBgColor: [Color(0xff374957)],
+                          //                 activeFgColor: Colors.white,
+                          //                 inactiveFgColor: Colors.white,
+                          //                 inactiveBgColor: Colors.white,
+                          //                 borderColor: [Colors.black12],
+                          //                 borderWidth: 1,
+                          //                 onToggle: null,
+                          //               ),
+                          //             ],
+                          //           ),
+                          //         ),
+                          //       ),
+                          //       SizedBox(
+                          //         height: size.height * 0.05,
+                          //       ),
+                          //       GestureDetector(
+                          //         onTap: (){
+                          //           setState(() {
+                          //           });
+                          //         },
+                          //         child: Container(
+                          //           padding: EdgeInsets.all(15),
+                          //           height: size.height * 0.07,
+                          //           width: size.width * 0.8,
+                          //           decoration: BoxDecoration(
+                          //             color: Color(0xffECF0F3),
+                          //             borderRadius: BorderRadius.circular(20),
+                          //             boxShadow: [
+                          //               BoxShadow(
+                          //                 color: Colors.black12,
+                          //                 offset: Offset(8.0, 8.0),
+                          //                 blurRadius: 9.0,
+                          //                 spreadRadius: 1,
+                          //               ),
+                          //               BoxShadow(
+                          //                 color: Colors.white,
+                          //                 offset: Offset(-4.0, -4.0),
+                          //                 blurRadius: 7.0,
+                          //                 spreadRadius: 1.0,
+                          //               ),
+                          //             ],
+                          //           ),
+                          //           child: Row(
+                          //             mainAxisAlignment:
+                          //             MainAxisAlignment.spaceBetween,
+                          //             children: [
+                          //               Text(
+                          //                 "Gate Valve 4",
+                          //                 style: TextStyle(
+                          //                     fontSize: size.height * 0.023,
+                          //                     fontWeight: FontWeight.w600),
+                          //               ),
+                          //               ToggleSwitch(
+                          //                 totalSwitches: 2,
+                          //                 minHeight: size.height * 0.2,
+                          //                 minWidth: 30,
+                          //                 cornerRadius: 9,
+                          //                 activeBgColor: [Color(0xff374957)],
+                          //                 activeFgColor: Colors.white,
+                          //                 inactiveFgColor: Colors.white,
+                          //                 inactiveBgColor: Colors.white,
+                          //                 borderColor: [Colors.black12],
+                          //                 borderWidth: 1,
+                          //                 onToggle: null,
+                          //               ),
+                          //             ],
+                          //           ),
+                          //         ),
+                          //       ),
+                          //       SizedBox(
+                          //         height: size.height * 0.05,
+                          //       ),
+                          //     ],
+                          //   ),
+                          // ),
                         ),
-
                       ),
-                      SizedBox(height: size.height*0.01,),
-
+                      SizedBox(
+                        height: size.height * 0.01,
+                      ),
                       Center(
                         child: Container(
+                          width: size.width * 0.6,
                           decoration: BoxDecoration(
                             color: Color(0xffECF0F3),
                             borderRadius: BorderRadius.circular(50),
@@ -389,12 +484,15 @@ class _GateValveState extends State<GateValve> {
                             ],
                           ),
                           child: ConfirmationSlider(
-                              height: size.height * 0.05,
+                              height: size.height * 0.07,
                               text: "Slid to off all",
                               backgroundColorEnd: Colors.white,
                               backgroundColor: Colors.white,
                               shadow: BoxShadow(spreadRadius: -1),
-                              sliderButtonContent: Icon(Icons.power_settings_new_rounded ,color: Colors.white54,),
+                              sliderButtonContent: Icon(
+                                Icons.power_settings_new_rounded,
+                                color: Colors.white54,
+                              ),
                               foregroundColor: Color(0xff374957),
                               onConfirmation: () {}),
                         ),
@@ -409,4 +507,12 @@ class _GateValveState extends State<GateValve> {
       ),
     );
   }
+}
+
+class ItemLists {
+  String title;
+
+  bool favorite;
+
+  ItemLists({required this.title, required this.favorite});
 }

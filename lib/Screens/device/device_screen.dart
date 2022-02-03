@@ -16,7 +16,7 @@ class _DeviceState extends State<Device> {
       backgroundColor: Color(0xffECF0F3),
       body: Padding(
         padding: EdgeInsets.only(
-            top: size.height * 0.05,
+            top: size.height * 0.035,
             left: size.width * 0.05,
             right: size.width * 0.05),
         child: Container(
@@ -26,7 +26,7 @@ class _DeviceState extends State<Device> {
               Text(
                 'Device',
                 style: TextStyle(
-                    fontSize: size.height * 0.04, fontWeight: FontWeight.w900),
+                    fontSize: size.height * 0.05, fontWeight: FontWeight.w900),
               ),
               // Container(
               //   height: 35,

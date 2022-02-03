@@ -19,7 +19,7 @@ class _MotorScreenState extends State<MotorScreen> {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(
-              top: size.height * 0.04,
+              top: size.height * 0.03,
               left: size.width * 0.05,
               right: size.width * 0.05),
           child: Container(
@@ -33,7 +33,7 @@ class _MotorScreenState extends State<MotorScreen> {
                       Text(
                         'Farming',
                         style: TextStyle(
-                            fontSize: size.height * 0.04,
+                            fontSize: size.height * 0.05,
                             fontWeight: FontWeight.w900),
                       ),
                       Container(
@@ -51,7 +51,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                   child: Icon(
                                     Icons.grid_view,
                                     color: Color(0xff374957),
-                                    size: size.height * 0.05,
+                                    size: size.height * 0.03,
                                   ),
                                 ),
                               ),
@@ -71,7 +71,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                   child: Icon(
                                     Icons.settings,
                                     color: Color(0xff374957),
-                                    size: size.height * 0.05,
+                                    size: size.height * 0.03,
                                   ),
                                 ),
                               ),
@@ -92,7 +92,7 @@ class _MotorScreenState extends State<MotorScreen> {
                       Text(
                         "Motors",
                         style: TextStyle(
-                            fontSize: size.height * 0.025,
+                            fontSize: size.height * 0.04,
                             fontWeight: FontWeight.w900),
                       ),
                       SizedBox(
@@ -143,7 +143,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
                                                   borderRadius:
-                                                      BorderRadius.circular(10),
+                                                      BorderRadius.circular(5),
                                                   gradient: LinearGradient(
                                                     colors: [
                                                       Colors.white
@@ -187,7 +187,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
                                                   borderRadius:
-                                                      BorderRadius.circular(10),
+                                                      BorderRadius.circular(5),
                                                   gradient: LinearGradient(
                                                     colors: [
                                                       Colors.white
@@ -231,7 +231,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
                                                   borderRadius:
-                                                      BorderRadius.circular(10),
+                                                      BorderRadius.circular(5),
                                                   gradient: LinearGradient(
                                                     colors: [
                                                       Colors.white
@@ -329,7 +329,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                           "Running time",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
-                                              fontSize: size.height * 0.013),
+                                              fontSize: size.height * 0.02),
                                         )
                                       ],
                                     ),
@@ -348,7 +348,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                           ),
                                           Container(
                                               height: size.height * 0.03,
-                                              width: size.width * 0.1,
+                                              width: size.width * 0.2,
                                               decoration: BoxDecoration(
                                                 color: Color(0xffECF0F3),
                                                 borderRadius:
@@ -393,7 +393,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                           ),
                                           Container(
                                               height: size.height * 0.03,
-                                              width: size.width * 0.1,
+                                              width: size.width * 0.2,
                                               decoration: BoxDecoration(
                                                 color: Color(0xffECF0F3),
                                                 borderRadius:
@@ -432,6 +432,8 @@ class _MotorScreenState extends State<MotorScreen> {
                       ),
                       Center(
                         child: Container(
+                          width: size.width*0.6,
+
                           decoration: BoxDecoration(
                             color: Color(0xffECF0F3),
                             borderRadius: BorderRadius.circular(50),
@@ -452,7 +454,7 @@ class _MotorScreenState extends State<MotorScreen> {
                             ],
                           ),
                           child: ConfirmationSlider(
-                              height: size.height * 0.05,
+                              height: size.height * 0.07,
                               text: "Slid to off all",
                               backgroundColorEnd: Colors.white,
                               backgroundColor: Colors.white,

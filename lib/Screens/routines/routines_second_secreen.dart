@@ -20,11 +20,11 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
         child: Stack(
           children: [
             Container(
-              padding: EdgeInsets.all(20),
-              width: double.infinity,
+
               margin: EdgeInsets.only(
-                top: size.height * 0.02,
-              ),
+                  top: size.height * 0.035,
+                  left: size.width * 0.05,
+                  right: size.width * 0.05),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

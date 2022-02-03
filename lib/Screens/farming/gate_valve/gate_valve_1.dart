@@ -13,12 +13,13 @@ class _GateValve1State extends State<GateValve1> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Scaffold(
+    return
+      Scaffold(
       backgroundColor: Color(0xffECF0F3),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(
-              top: size.height * 0.04,
+              top: size.height * 0.03,
               left: size.width * 0.05,
               right: size.width * 0.05),
           child: Container(
@@ -32,7 +33,7 @@ class _GateValve1State extends State<GateValve1> {
                       Text(
                         'Farming',
                         style: TextStyle(
-                            fontSize: size.height * 0.04,
+                            fontSize: size.height * 0.05,
                             fontWeight: FontWeight.w900),
                       ),
                       Container(
@@ -50,7 +51,7 @@ class _GateValve1State extends State<GateValve1> {
                                   child: Icon(
                                     Icons.grid_view,
                                     color: Color(0xff374957),
-                                    size: size.height * 0.05,
+                                    size: size.height * 0.03,
                                   ),
                                 ),
                               ),
@@ -70,7 +71,7 @@ class _GateValve1State extends State<GateValve1> {
                                   child: Icon(
                                     Icons.settings,
                                     color: Color(0xff374957),
-                                    size: size.height * 0.05,
+                                    size: size.height * 0.03,
                                   ),
                                 ),
                               ),
@@ -91,7 +92,7 @@ class _GateValve1State extends State<GateValve1> {
                       Text(
                         "Gate Valves 1",
                         style: TextStyle(
-                            fontSize: size.height * 0.025,
+                            fontSize: size.height * 0.03,
                             fontWeight: FontWeight.w900),
                       ),
                       SizedBox(
@@ -107,7 +108,7 @@ class _GateValve1State extends State<GateValve1> {
                             ),
                             Container(
                               padding: EdgeInsets.all(30),
-                              height: size.height * 0.2,
+                              height: size.height * 0.23,
                               width: size.width * 0.8,
                               decoration: BoxDecoration(
                                 color: Color(0xffECF0F3),
@@ -137,13 +138,13 @@ class _GateValve1State extends State<GateValve1> {
                                         Text(
                                           "Gate Valve 1",
                                           style: TextStyle(
-                                              fontSize: size.height * 0.015,
+                                              fontSize: size.height * 0.023,
                                               fontWeight: FontWeight.w600),
                                         ),
                                         ToggleSwitch(
                                           totalSwitches: 2,
-                                          minHeight: size.height * 0.040,
-                                          minWidth: size.width * 0.04,
+                                          minHeight: size.height * 0.038,
+                                          minWidth: size.width * 0.06,
                                           cornerRadius: 9,
                                           activeBgColor: [Color(0xff374957)],
                                           activeFgColor: Colors.white,
@@ -173,13 +174,14 @@ class _GateValve1State extends State<GateValve1> {
                                                 style: TextStyle(
                                                     fontWeight: FontWeight.w600,
                                                     fontSize:
-                                                        size.height * 0.013),
+                                                        size.height * 0.020),
                                               ),
                                             ],
                                           ),
                                         ),
+                                        SizedBox(width: size.width*0.03,),
                                         Container(
-                                          width: size.width * 0.5,
+                                          width: size.width * 0.4,
                                           child: Column(
                                             children: [
                                               Container(
@@ -205,7 +207,7 @@ class _GateValve1State extends State<GateValve1> {
                                                 ),
                                               ),
                                               SizedBox(
-                                                height: size.height * 0.04,
+                                                height: size.height * 0.03,
                                               ),
                                               Container(
                                                 child: Row(

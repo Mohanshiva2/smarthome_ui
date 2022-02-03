@@ -40,6 +40,7 @@ dependencies:
   toggle_switch:
   custom_navigator:
   slide_to_confirm:
+  custom_switch:
 
 dev_dependencies:
   flutter_test:
