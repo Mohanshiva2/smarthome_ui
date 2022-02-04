@@ -279,17 +279,20 @@ class _FarmingState extends State<Farming> {
                                             ),
                                           ],
                                         ),
-                                        child: ConfirmationSlider(
+                                        child:
+                                        ConfirmationSlider(
+                                            backgroundShape: BorderRadius.circular(40),
                                             height: size.height * 0.07,
+                                            width: size.width*0.6,
                                             text: "Slid to off all",
                                             backgroundColorEnd: Colors.white,
                                             backgroundColor: Colors.white,
                                             shadow: BoxShadow(spreadRadius: -1),
-                                            foregroundColor: Color(0xff374957),
                                             sliderButtonContent: Icon(
                                               Icons.power_settings_new_rounded,
                                               color: Colors.white54,
                                             ),
+                                            foregroundColor: Color(0xff374957),
                                             onConfirmation: () {}),
                                       ),
                                     ),

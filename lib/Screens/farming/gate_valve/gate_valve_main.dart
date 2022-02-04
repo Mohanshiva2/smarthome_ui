@@ -8,9 +8,10 @@ import 'package:toggle_switch/toggle_switch.dart';
 
 class NewContainer {
   final String text;
-  var bool = false;
+   bool value = false;
 
-  NewContainer(this.bool, this.text);
+
+  NewContainer(this.text);
 }
 
 class GateValve extends StatefulWidget {
@@ -53,6 +54,8 @@ class _GateValveState extends State<GateValve> {
       favorite: false,
     ),
   ];
+
+  bool isToggled = false;
 
   @override
   Widget build(BuildContext context) {
@@ -188,11 +191,8 @@ class _GateValveState extends State<GateValve> {
                                         inactiveBgColor: Colors.white,
                                         borderColor: [Colors.black12],
                                         borderWidth: 1,
-                                        changeOnTap: values != values,
                                         onToggle: (bool) {
-                                          setState(() {
-                                          values != values;
-                                          });
+                                          isToggled = true;
                                         },
                                       ),
                                     ),
@@ -484,7 +484,9 @@ class _GateValveState extends State<GateValve> {
                             ],
                           ),
                           child: ConfirmationSlider(
+                            backgroundShape: BorderRadius.circular(40),
                               height: size.height * 0.07,
+                              width: size.width*0.6,
                               text: "Slid to off all",
                               backgroundColorEnd: Colors.white,
                               backgroundColor: Colors.white,
