@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:smarthome_ui/Screens/login-singup/login_screen.dart';
 
 import 'Screens/home/tabbar.dart';
+
+import 'Screens/login-singup/singup_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,7 +37,7 @@ class _MyAppState extends State<MyApp> {
       theme:  ThemeData(
           scaffoldBackgroundColor:  Color(0xffECF0F3),
       ),
-      home: TabbBar(),
+      home: LoginScreen(),
     );
   }
 }

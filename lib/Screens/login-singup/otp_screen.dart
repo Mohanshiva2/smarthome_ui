@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:smarthome_ui/Screens/login-singup/singup_screen.dart';
 
-class LoginScreen extends StatefulWidget {
+class OTPScreen extends StatefulWidget {
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _OTPScreenState createState() => _OTPScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _OTPScreenState extends State<OTPScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Container(
               margin: EdgeInsets.only(
-                  // top: size.height * 0.01,
+                // top: size.height * 0.01,
                   left: size.width * 0.08,
                   right: size.width * 0.08),
               // height: size.height * 0.33,
@@ -84,61 +84,59 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(30),
+                  padding:  EdgeInsets.all(30),
                   child: Column(
+
                     children: [
-                      TextField(
-                        keyboardType: TextInputType.emailAddress,
-                        textInputAction: TextInputAction.next,
-                        decoration: InputDecoration(
-                          hintText: 'Email',
-                          hintStyle: TextStyle(
-                            color: Color(0xffACACAC),
-                          ),
-                        ),
-                      ),
+                     Text("Enter OTP sent to your Email",style: TextStyle(fontSize: size.height*0.018,color: Color(0xffACACAC)),),
                       SizedBox(
                         height: size.height * 0.03,
                       ),
                       TextField(
-                        obscureText: true,
-
+                        keyboardType: TextInputType.phone,
                         decoration: InputDecoration(
                           hintStyle: TextStyle(
                             color: Color(0xffACACAC),
                           ),
-                          hintText: 'Password',
+                          hintText: 'One time Password',
                         ),
                       ),
                       SizedBox(
                         height: 50,
                       ),
-                      Container(
-                        height: 50,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          color: Color(0xffECF0F3),
-                          borderRadius: BorderRadius.circular(30),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              offset: Offset(4.0, 4.0),
-                              blurRadius: 1.0,
-                              spreadRadius: 0.4,
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+
+                          });
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 250,
+                          decoration: BoxDecoration(
+                            color: Color(0xffECF0F3),
+                            borderRadius: BorderRadius.circular(30),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                offset: Offset(4.0, 4.0),
+                                blurRadius: 1.0,
+                                spreadRadius: 0.4,
+                              ),
+                              BoxShadow(
+                                color: Colors.white,
+                                offset: Offset(-4.0, -4.0),
+                                blurRadius: 7.0,
+                                spreadRadius: 1.0,
+                              ),
+                            ],
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Confirm',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600, fontSize: 20),
                             ),
-                            BoxShadow(
-                              color: Colors.white,
-                              offset: Offset(-4.0, -4.0),
-                              blurRadius: 7.0,
-                              spreadRadius: 1.0,
-                            ),
-                          ],
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Login',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 20),
                           ),
                         ),
                       ),
@@ -172,7 +170,13 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
+                  // SizedBox(width: size.width*0.08,),
+                  // Container(
+                  //   // child: Lottie.asset("assets/75752-google-icon.json",fit: BoxFit.fill,),
+                  //   height: 40,width: 40,
+                  //   color: Colors.transparent,
+                  // ),
+                  // SizedBox(width: size.width*0.08,),
                   Text(
                     'Login with Google',
                     style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),

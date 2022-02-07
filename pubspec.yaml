@@ -38,7 +38,7 @@ dependencies:
   flutter_neumorphic:
   lottie:
   toggle_switch:
-  custom_navigator:
+
   slide_to_confirm:
   custom_switch:
 
