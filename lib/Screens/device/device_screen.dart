@@ -13,7 +13,6 @@ class _DeviceState extends State<Device> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(0xffECF0F3),
       body: Padding(
         padding: EdgeInsets.only(
             top: size.height * 0.035,

@@ -15,7 +15,6 @@ class _MotorScreenState extends State<MotorScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(0xffECF0F3),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(
@@ -121,7 +120,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                       spreadRadius: 1,
                                     ),
                                     BoxShadow(
-                                      color: Colors.white,
+                                      color: Colors.white.withOpacity(0.9),
                                       offset: Offset(-4.0, -4.0),
                                       blurRadius: 7.0,
                                       spreadRadius: 1.0,
@@ -142,24 +141,23 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 width: size.width * 0.07,
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
-                                                 
                                                   borderRadius:
                                                       BorderRadius.circular(10),
                                                   gradient: LinearGradient(
                                                     colors: [
                                                       Colors.white
-                                                          .withOpacity(0.1),
+                                                          .withOpacity(0.5),
                                                       Colors.black12
-                                                          .withOpacity(0.3),
+                                                          .withOpacity(0.1),
                                                     ],
                                                     begin: FractionalOffset(
-                                                        0.8, 1.0),
+                                                        0.6, 1.0),
                                                     end: FractionalOffset(
                                                         -1.6, 0.0),
-                                                    tileMode: TileMode.clamp,
+
                                                     stops: [
                                                       0.1,
-                                                      0.6,
+                                                      0.9,
                                                     ],
                                                   ),
                                                 ),
@@ -167,106 +165,115 @@ class _MotorScreenState extends State<MotorScreen> {
                                                   child: Text(
                                                     "R",
                                                     style: TextStyle(
+                                                      fontSize: size.height*0.011,
+                                                        fontWeight:
+                                                            FontWeight.w700,
                                                         color: Colors
-                                                            .red.shade700),
+                                                            .red.shade800),
                                                   ),
                                                 ),
                                               ),
                                               SizedBox(
                                                 height: size.height * 0.01,
                                               ),
-                                              Text('<Data>')
+                                              Text('<Data>'),
                                             ],
                                           ),
                                         ),
-                                        // Container(
-                                        //   child: Column(
-                                        //     children: [
-                                        //       Container(
-                                        //         height: size.height * 0.04,
-                                        //         width: size.width * 0.06,
-                                        //         decoration: BoxDecoration(
-                                        //           color: Colors.white,
-                                        //           borderRadius:
-                                        //               BorderRadius.circular(5),
-                                        //           gradient: LinearGradient(
-                                        //             colors: [
-                                        //               Colors.white
-                                        //                   .withOpacity(0.0),
-                                        //               Colors.black12
-                                        //                   .withOpacity(0.2),
-                                        //             ],
-                                        //             begin: FractionalOffset(
-                                        //                 1.0, 1.0),
-                                        //             end: FractionalOffset(
-                                        //                 -1.9, 0.2),
-                                        //             tileMode: TileMode.clamp,
-                                        //             stops: [
-                                        //               0.1,
-                                        //               0.6,
-                                        //             ],
-                                        //           ),
-                                        //         ),
-                                        //         child: Center(
-                                        //           child: Text(
-                                        //             "Y",
-                                        //             style: TextStyle(
-                                        //                 color: Colors
-                                        //                     .yellow.shade700),
-                                        //           ),
-                                        //         ),
-                                        //       ),
-                                        //       SizedBox(
-                                        //         height: size.height * 0.01,
-                                        //       ),
-                                        //       Text('<Data>')
-                                        //     ],
-                                        //   ),
-                                        // ),
-                                        // Container(
-                                        //   child: Column(
-                                        //     children: [
-                                        //       Container(
-                                        //         height: size.height * 0.04,
-                                        //         width: size.width * 0.06,
-                                        //         decoration: BoxDecoration(
-                                        //           color: Colors.white,
-                                        //           borderRadius:
-                                        //               BorderRadius.circular(5),
-                                        //           gradient: LinearGradient(
-                                        //             colors: [
-                                        //               Colors.white
-                                        //                   .withOpacity(0.0),
-                                        //               Colors.black12
-                                        //                   .withOpacity(0.2),
-                                        //             ],
-                                        //             begin: FractionalOffset(
-                                        //                 1.0, 1.0),
-                                        //             end: FractionalOffset(
-                                        //                 -1.9, 0.2),
-                                        //             tileMode: TileMode.clamp,
-                                        //             stops: [
-                                        //               0.1,
-                                        //               0.6,
-                                        //             ],
-                                        //           ),
-                                        //         ),
-                                        //         child: Center(
-                                        //           child: Text(
-                                        //             "G",
-                                        //             style: TextStyle(
-                                        //                 color: Colors
-                                        //                     .green.shade700),
-                                        //           ),
-                                        //         ),
-                                        //       ),
-                                        //       SizedBox(
-                                        //         height: size.height * 0.01,
-                                        //       ),
-                                        //       Text('<Data>')
-                                        //     ],
-                                        //   ),
-                                        // ),
+                                        Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.04,
+                                                width: size.width * 0.07,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius:
+                                                  BorderRadius.circular(10),
+                                                  gradient: LinearGradient(
+                                                    colors: [
+                                                      Colors.white
+                                                          .withOpacity(0.5),
+                                                      Colors.black12
+                                                          .withOpacity(0.1),
+                                                    ],
+                                                    begin: FractionalOffset(
+                                                        0.6, 1.0),
+                                                    end: FractionalOffset(
+                                                        -1.6, 0.0),
+
+                                                    stops: [
+                                                      0.1,
+                                                      0.9,
+                                                    ],
+                                                  ),
+                                                ),
+                                                child: Center(
+                                                  child: Text(
+                                                    "Y",
+                                                    style: TextStyle(
+                                                        fontSize: size.height*0.011,
+                                                        fontWeight:
+                                                        FontWeight.w700,
+                                                        color: Colors
+                                                            .yellow.shade800),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text('<Data>'),
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: size.height * 0.04,
+                                                width: size.width * 0.07,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius:
+                                                  BorderRadius.circular(10),
+                                                  gradient: LinearGradient(
+                                                    colors: [
+                                                      Colors.white
+                                                          .withOpacity(0.5),
+                                                      Colors.black12
+                                                          .withOpacity(0.1),
+                                                    ],
+                                                    begin: FractionalOffset(
+                                                        0.6, 1.0),
+                                                    end: FractionalOffset(
+                                                        -1.6, 0.0),
+
+                                                    stops: [
+                                                      0.1,
+                                                      0.9,
+                                                    ],
+                                                  ),
+                                                ),
+                                                child: Center(
+                                                  child: Text(
+                                                    "G",
+                                                    style: TextStyle(
+                                                        fontSize: size.height*0.011,
+                                                        fontWeight:
+                                                        FontWeight.w700,
+                                                        color: Colors
+                                                            .green.shade800),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: size.height * 0.01,
+                                              ),
+                                              Text('<Data>'),
+                                            ],
+                                          ),
+                                        ),
                                       ],
                                     ),
                                     SizedBox(
@@ -331,7 +338,7 @@ class _MotorScreenState extends State<MotorScreen> {
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: size.height * 0.02),
-                                        )
+                                        ),
                                       ],
                                     ),
                                     SizedBox(
@@ -348,34 +355,36 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 fontWeight: FontWeight.w600),
                                           ),
                                           Container(
-                                              height: size.height * 0.03,
-                                              width: size.width * 0.2,
-                                              decoration: BoxDecoration(
-                                                color: Color(0xffECF0F3),
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
-                                                boxShadow: [
-                                                  BoxShadow(
-                                                    color: Colors.black12,
-                                                    offset: Offset(8.0, 8.0),
-                                                    blurRadius: 9.0,
-                                                    spreadRadius: 1,
-                                                  ),
-                                                  BoxShadow(
-                                                    color: Colors.white,
-                                                    offset: Offset(-4.0, -4.0),
-                                                    blurRadius: 7.0,
-                                                    spreadRadius: 1.0,
-                                                  ),
-                                                ],
-                                              ),
-                                              child: Center(
-                                                  child: Text(
+                                            height: size.height * 0.03,
+                                            width: size.width * 0.2,
+                                            decoration: BoxDecoration(
+                                              color: Color(0xffECF0F3),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.black12,
+                                                  offset: Offset(8.0, 8.0),
+                                                  blurRadius: 9.0,
+                                                  spreadRadius: 1,
+                                                ),
+                                                BoxShadow(
+                                                  color: Colors.white,
+                                                  offset: Offset(-4.0, -4.0),
+                                                  blurRadius: 7.0,
+                                                  spreadRadius: 1.0,
+                                                ),
+                                              ],
+                                            ),
+                                            child: Center(
+                                              child: Text(
                                                 "1.25hrs",
                                                 style: TextStyle(
                                                     fontWeight:
                                                         FontWeight.bold),
-                                              ))),
+                                              ),
+                                            ),
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -393,34 +402,36 @@ class _MotorScreenState extends State<MotorScreen> {
                                                 fontWeight: FontWeight.w600),
                                           ),
                                           Container(
-                                              height: size.height * 0.03,
-                                              width: size.width * 0.2,
-                                              decoration: BoxDecoration(
-                                                color: Color(0xffECF0F3),
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
-                                                boxShadow: [
-                                                  BoxShadow(
-                                                    color: Colors.black12,
-                                                    offset: Offset(8.0, 8.0),
-                                                    blurRadius: 9.0,
-                                                    spreadRadius: 1,
-                                                  ),
-                                                  BoxShadow(
-                                                    color: Colors.white,
-                                                    offset: Offset(-4.0, -4.0),
-                                                    blurRadius: 7.0,
-                                                    spreadRadius: 1.0,
-                                                  ),
-                                                ],
-                                              ),
-                                              child: Center(
-                                                  child: Text(
+                                            height: size.height * 0.03,
+                                            width: size.width * 0.2,
+                                            decoration: BoxDecoration(
+                                              color: Color(0xffECF0F3),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.black12,
+                                                  offset: Offset(8.0, 8.0),
+                                                  blurRadius: 9.0,
+                                                  spreadRadius: 1,
+                                                ),
+                                                BoxShadow(
+                                                  color: Colors.white,
+                                                  offset: Offset(-4.0, -4.0),
+                                                  blurRadius: 7.0,
+                                                  spreadRadius: 1.0,
+                                                ),
+                                              ],
+                                            ),
+                                            child: Center(
+                                              child: Text(
                                                 "1.25hrs",
                                                 style: TextStyle(
                                                     fontWeight:
                                                         FontWeight.bold),
-                                              ))),
+                                              ),
+                                            ),
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -433,8 +444,7 @@ class _MotorScreenState extends State<MotorScreen> {
                       ),
                       Center(
                         child: Container(
-                          width: size.width*0.6,
-
+                          width: size.width * 0.6,
                           decoration: BoxDecoration(
                             color: Color(0xffECF0F3),
                             borderRadius: BorderRadius.circular(50),
@@ -457,7 +467,7 @@ class _MotorScreenState extends State<MotorScreen> {
                           child: ConfirmationSlider(
                               backgroundShape: BorderRadius.circular(40),
                               height: size.height * 0.07,
-                              width: size.width*0.6,
+                              width: size.width * 0.6,
                               text: "Slid to off all",
                               backgroundColorEnd: Colors.white,
                               backgroundColor: Colors.white,

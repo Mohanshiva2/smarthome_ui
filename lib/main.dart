@@ -31,6 +31,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme:  ThemeData(
+          scaffoldBackgroundColor:  Color(0xffECF0F3),
+      ),
       home: TabbBar(),
     );
   }

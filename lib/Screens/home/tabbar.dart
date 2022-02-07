@@ -20,7 +20,6 @@ class _TabbBarState extends State<TabbBar> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(0xffECF0F3),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: Color(0xffE5E5E5),

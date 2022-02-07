@@ -16,7 +16,7 @@ class _RoutinesState extends State<Routines> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Color(0xffECF0F3),
+
       body: Stack(
       children: [
           Container(
@@ -31,7 +31,7 @@ class _RoutinesState extends State<Routines> {
                   child: Text(
                     "Routines",
                     style:
-                        TextStyle(fontWeight: FontWeight.w900, fontSize: 40),
+                        TextStyle(fontWeight: FontWeight.w900, fontSize: size.height*0.04),
                   ),
                 ),
                 Container(
@@ -93,7 +93,7 @@ class _RoutinesState extends State<Routines> {
                     children: [
                       Text(
                         "Recent Routines",
-                        style: TextStyle(fontSize: size.height * 0.04,fontWeight: FontWeight.w900),
+                        style: TextStyle(fontSize: size.height * 0.03,fontWeight: FontWeight.w900),
                       ),
                       SizedBox(
                         height: size.height * 0.02,

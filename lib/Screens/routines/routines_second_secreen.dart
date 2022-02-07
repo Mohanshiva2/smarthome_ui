@@ -15,7 +15,7 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(0xffECF0F3),
+
       body: SingleChildScrollView(
         child: Stack(
           children: [
@@ -36,7 +36,7 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
                           'Create new Routine',
                           style: TextStyle(
                             fontWeight: FontWeight.w900,
-                            fontSize: 30,
+                            fontSize: size.height*0.03,
                           ),
                         ),
                         SizedBox(
@@ -102,7 +102,7 @@ class _RoutinesSecondScreenState extends State<RoutinesSecondScreen> {
                         Text(
                           "Select Device",
                           style: TextStyle(
-                              fontSize: size.height * 0.03,
+                              fontSize: size.height * 0.02,
                               fontWeight: FontWeight.w700),
                         ),
 

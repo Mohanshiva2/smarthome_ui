@@ -22,7 +22,7 @@ class _FarmingState extends State<Farming> {
     Size size = MediaQuery.of(context).size;
     return
       Scaffold(
-      backgroundColor: Color(0xffECF0F3),
+
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(
@@ -40,7 +40,7 @@ class _FarmingState extends State<Farming> {
                       Text(
                         'Farming',
                         style: TextStyle(
-                            fontSize: size.height * 0.05,
+                            fontSize: size.height * 0.04,
                             fontWeight: FontWeight.w900),
                       ),
                       Container(
@@ -100,7 +100,7 @@ class _FarmingState extends State<Farming> {
                       Text(
                         "Devices",
                         style: TextStyle(
-                            fontSize: size.height * 0.04,
+                            fontSize: size.height * 0.03,
                             fontWeight: FontWeight.w900),
                       ),
                       SizedBox(
